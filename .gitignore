@@ -1,0 +1,5 @@
+*.ipynb*
+app/
+*.venv
+*.py
+*.c

@@ -1,0 +1,30 @@
+geopandas
+shapely
+pyproj
+rasterio
+# Visualization
+matplotlib
+plotly
+jupyterlab 
+notebook
+geodatasets
+# Data handling and analysis
+# pandas
+# numpy
+# scipy
+# # Web mapping
+# leafmap
+# # leafmap>=0.33.1
+# ipyleaflet
+# Earth observation
+# earthpy
+# sentinelsat
+# Utilities
+# tqdm
+# Optional more advanced packages
+# (uncomment if needed for specific projects)
+# osmnx
+# xarray
+# netcdf4
+# geopy
+# rtree

@@ -1,0 +1,11 @@
+services:
+  app:
+    image: pygisdock:medium
+    container_name: pygisdockcont
+    # environment:
+    #   - IDE_SET=lab
+    ports:
+      - "8000:8888"
+    volumes:
+      - ./app:/app
+  
