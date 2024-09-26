@@ -47,3 +47,7 @@ Both methods will be demostrated as shown below
         docker run idowuilekura/dockgispy -v path_to_your_folder:app -p port_number:8888
         ```
 https://github.com/user-attachments/assets/9127f8f6-4147-4ea9-8c42-d9cf5ec4e5e2
+
+Docker compose up Video 
+https://github.com/user-attachments/assets/878d5ede-e1c9-4580-82ff-9f56a58dfc09
+
