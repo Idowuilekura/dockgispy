@@ -82,3 +82,4 @@ https://github.com/user-attachments/assets/9127f8f6-4147-4ea9-8c42-d9cf5ec4e5e2
 **Build your own Image from Scratch**
 
 If you wish to build your own image, probably because the images do not have modules your need for your workflow or you wish to strip down the modules that are installed. You can follow the below, steps to build your image from scratch. 
+- Step 1, clone the repository with this command `git clone 
