@@ -46,9 +46,39 @@ Both methods will be demostrated as shown below
         ```
         docker run idowuilekura/dockgispy -v path_to_your_folder:app -p port_number:8888
         ```
+**Running the Image with Docker Compose**
+
+A much easier method to run the image is through a docker compose file. Docker-compose helps to automate the running of docker images. 
+A sample docker compose file is shown below to run the smallest dockgispy image. If you are not familiar with docker-compose, you can read more with this [link](https://www.freecodecamp.org/news/what-is-docker-compose-how-to-use-it/). 
+
+If you want to specify the environment variable, you can uncomment or remove the hash key behind the environment and the -IDE_SET=lab. If you wish to set the development environment to a notebook can you use `IDE_SET=notebook` 
+Copy the below, into a file with the name `docker-compose.yaml` and save it.
+
+```
+services:
+  app:
+    image: dockgispy:smallest
+    container_name: dockgispycont
+    # environment:
+    #   - IDE_SET=lab
+    ports:
+      - "8000:8888"
+    volumes:
+      - ./app:/app
+```
+Once the file has been saved, you can start the container with this command `docker compose up`. The `docker compose up` command automatically pull the image if it doesn't exist and run the image. 
+*N.B Ensure you run the command in the terminal that matches the directory where the file is saved.*
+**Video Demostration of Running the Image**
+You can follow, the step below if you wish to watch a video on how to run the images with or without docker-compose
+
+- Without Docker-compose 
+
 https://github.com/user-attachments/assets/9127f8f6-4147-4ea9-8c42-d9cf5ec4e5e2
 
-Docker compose up Video 
+- With Docker-compose
 
-https://github.com/user-attachments/assets/878d5ede-e1c9-4580-82ff-9f56a58dfc09
+  https://github.com/user-attachments/assets/878d5ede-e1c9-4580-82ff-9f56a58dfc09
 
+**Build your own Image from Scratch**
+
+If you wish to build your own image, probably because the images do not have modules your need for your workflow or you wish to strip down the modules that are installed. You can follow the below, steps to build your image from scratch. 
