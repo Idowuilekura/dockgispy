@@ -1,5 +1,11 @@
 Dockgispy is a battery included docker image for the Gis Python Ecosystem, inspired by the QGISPY Battery Included Gis Python Module. The image was developed to solve the challenges beginners encounter while setting up Gis based Python Modules on different operating systems especially on Windows. Installing Python modules on Linux based operating system is easier and seamless, however this can be tedious and frustrating for new users and also experienced GIS users. With Dockgispy, users will only care about the execution of their workflows while the setting up processes is removed from the workflow. The image aims to be a low-code solution for deploying python GIS infrastructure for development and work. With a simple command, users have access to either a Jupyter Notebook or Jupyter Lab which is common with GIS Python Users for development and prototyping. 
 
+**Features**
+- 🫙 Low code Python Based Environment for Gis Development and workflow.
+- 🔥 Image python modules built with UV, the fastest python package manager and installer.
+- 🥰 Faster and easier way to go from ideation to development without worrying about your underlying operating system.
+- ⚔ Ability to be creative and explore without fear of destroying your local system. 
+
 **Tags**
 - Smallest contains few GIS python module, intended for beginners, students or those who want to quickly prototype with basic GIS modules in Python. The installed libraries can be checked with this link. 
 - Medium contains python modules from the smallest and more modules. This is intended for those who wish to explore GIS in python at an intermediate level.
@@ -86,4 +92,19 @@ If you wish to build your own image, probably because the images do not have mod
 - Change your directory into the cloned folder which is `dock_gis_py` with this command `cd dock_gis_py`
 - You can change the directory to any of the folder tag of your choice such as `dockgispysmallest`.
 - Once you are in the folder of your choice, you will see a file named `requirements.txt`. To learn more about the importance of `requirements.txt` you can check this [link](https://pip.pypa.io/en/stable/reference/requirements-file-format/). You need to open the `requirements.txt` and remove or add the python Gis module of your choice.
-- Once, you are done with the 
+- Once, you are done with the editing, save the file. Ensure you confirm that your changes are saved.
+- The next step is to build your docker image. To build your image type this command `docker build -t name_of_your_image` e.g if you wish to use `dockgispy` as the name of your new image then run this command `docker build -t dockgispy`. The image will automatically build with a speed of light, thanks to `UV` 😉 for installing the packages.
+- Once you have built the image, you can run this command `docker image ls` and see your newly built image.
+- The last step is to run your image, by using `docker run -v path_to_your_local_folder:/app -p your_desired_port:8888 dockgispy` assume your newly built image is dockgispy. You can also use docker-compose, replace the image with your image name, save the content below into a file and run `docker compose up`
+  ```
+  services:
+  app:
+    image: your_image_name
+    container_name: your_preferred_container_name
+    # environment:
+    #   - IDE_SET=lab
+    ports:
+      - "8000:8888"
+    volumes:
+      - ./app:/app
+  ```
