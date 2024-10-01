@@ -84,4 +84,6 @@ https://github.com/user-attachments/assets/9127f8f6-4147-4ea9-8c42-d9cf5ec4e5e2
 If you wish to build your own image, probably because the images do not have modules your need for your workflow or you wish to strip down the modules that are installed. You can follow the steps below to build your image from scratch. 
 - Clone the repository with this command `git clone https://github.com/Idowuilekura/dock_gis_py.git`
 - Change your directory into the cloned folder which is `dock_gis_py` with this command `cd dock_gis_py`
-- 
+- You can change the directory to any of the folder tag of your choice such as `dockgispysmallest`.
+- Once you are in the folder of your choice, you will see a file named `requirements.txt`. To learn more about the importance of `requirements.txt` you can check this [link](https://pip.pypa.io/en/stable/reference/requirements-file-format/). You need to open the `requirements.txt` and remove or add the python Gis module of your choice.
+- Once, you are done with the 
