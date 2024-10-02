@@ -15,10 +15,10 @@ Dockgispy offers a low-code solution for deploying your Python GIS infrastructur
 - ⚔ Ability to be creative and explore without fear of destroying your local system. The workflow is opened in an isolated environment away from your local filesytem. 
 
 **Tags**
-- Smallest contains few GIS python module, intended for beginners, students or those who want to quickly prototype with basic GIS modules in Python. The installed libraries can be checked with this link. 
-- Medium contains python modules from the smallest and more modules. This is intended for those who wish to explore GIS in python at an intermediate level.
-- Large contains python modules from the Medium image size and the inclusion of GDAL python module.
-- Largest Contains python modules from the Large with the inclusion of Apache Spark, a big data analytics tool for data processing and transformation.
+- Smallest contains few GIS python module, intended for beginners, students or those who want to quickly prototype with basic GIS modules in Python. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispysmallest/requirements.txt). 
+- Medium contains python modules from the smallest and more modules. This is intended for those who wish to explore GIS in python at an intermediate level. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispymedium/requirements.txt)
+- Large contains python modules from the Medium image size and the inclusion of GDAL python module. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylarge/requirements.txt)
+- Largest Contains python modules from the Large with the inclusion of Apache Spark, a big data analytics tool for data processing and transformation. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylargest/requirements.txt)
 
 **Image Environment Variables**
 To run the docker image, you need to provide two optional environment variables which are
