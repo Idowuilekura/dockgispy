@@ -1,6 +1,12 @@
 ![image](https://github.com/user-attachments/assets/2ddc6ffb-3a78-4094-966c-21795ba267f2)
 
-Dockgispy is a battery included docker image for the Gis Python Ecosystem, inspired by the QGISPY Battery Included Gis Python Module. The image was developed to solve the challenges beginners encounter while setting up Gis based Python Modules on different operating systems especially on Windows. Installing Python modules on Linux based operating system is easier and seamless, however this can be tedious and frustrating for new users and also experienced GIS users. With Dockgispy, users will only care about the execution of their workflows while the setting up processes is removed from the workflow. The image aims to be a low-code solution for deploying python GIS infrastructure for development and work. With a simple command, users have access to either a Jupyter Notebook or Jupyter Lab which is common with GIS Python Users for development and prototyping. 
+**Dockgispy** is a game-changing Docker image designed specifically for the GIS ecosystem! Inspired by the Qiusheng Wu [giswqs](https://github.com/giswqs) [geospatial](https://pypi.org/project/geospatial/) Python module, which simplifies the installation of commonly used GIS Python libraries with a single command, Dockgispy takes ease of use to the next level.
+
+This all-in-one solution comes pre-loaded with essential Python modules, allowing you to dive straight into your projects without the usual setup hassles. Whether you're a newcomer navigating the complexities of GIS or an experienced user frustrated by installation quirks—especially on Windows—Dockgispy is here to save the day.
+
+Unlike traditional installations that can be tedious and time-consuming, Dockgispy streamlines the process so you can focus on what really matters: executing your workflows. With just a simple command, you gain instant access to Jupyter Notebook or Jupyter Lab—popular environments among GIS professionals for development and prototyping.
+
+Dockgispy offers a low-code solution for deploying your Python GIS infrastructure, ensuring that you spend less time on setup and more time on creativity and analysis. Say goodbye to installation headaches and hello to productivity with Dockgispy—your gateway to seamless geospatial development! 
 
 **Features**
 - 🫙 Low code Python Based Environment for Gis Development and workflow.
