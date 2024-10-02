@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/2ddc6ffb-3a78-4094-966c-21795ba267f2)
+
 Dockgispy is a battery included docker image for the Gis Python Ecosystem, inspired by the QGISPY Battery Included Gis Python Module. The image was developed to solve the challenges beginners encounter while setting up Gis based Python Modules on different operating systems especially on Windows. Installing Python modules on Linux based operating system is easier and seamless, however this can be tedious and frustrating for new users and also experienced GIS users. With Dockgispy, users will only care about the execution of their workflows while the setting up processes is removed from the workflow. The image aims to be a low-code solution for deploying python GIS infrastructure for development and work. With a simple command, users have access to either a Jupyter Notebook or Jupyter Lab which is common with GIS Python Users for development and prototyping. 
 
 **Features**
