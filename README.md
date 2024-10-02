@@ -95,7 +95,7 @@ If you wish to build your own image, probably because the images do not have mod
 - You can change the directory to any of the folder tag of your choice such as `dockgispysmallest`.
 - Once you are in the folder of your choice, you will see a file named `requirements.txt`. To learn more about the importance of `requirements.txt` you can check this [link](https://pip.pypa.io/en/stable/reference/requirements-file-format/). You need to open the `requirements.txt` and remove or add the python Gis module of your choice.
 - Once, you are done with the editing, save the file. Ensure you confirm that your changes are saved.
-- The next step is to build your docker image. To build your image type this command `docker build -t name_of_your_image` e.g if you wish to use `dockgispy` as the name of your new image then run this command `docker build -t dockgispy`. The image will automatically build with a speed of light, thanks to `UV` 😉 for installing the packages.
+- The next step is to build your docker image. To build your image type this command `docker build -t name_of_your_image` e.g if you wish to use `dockgispy` as the name of your new image then run this command `docker build -t dockgispy`. The image will automatically build with a speed of light, thanks to `UV` 😉 for installing the python packages.
 - Once you have built the image, you can run this command `docker image ls` and see your newly built image.
 - The last step is to run your image, by using `docker run -v path_to_your_local_folder:/app -p your_desired_port:8888 dockgispy` assume your newly built image is dockgispy. You can also use docker-compose, replace the image with your image name in the content shown below, save the content into a file and run `docker compose up`.
   
