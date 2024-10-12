@@ -19,6 +19,7 @@ Beyond carring for the underlying operating system, a common challenge faced by 
 Dockgispy was developed to solve the challenge of installing your commonly used python module, and cut off the time taken to get your environment ready for your GIS workflow. You can think, of a system that removes the hassles of setting up your environment and take you directly to your workflow. Dockgispy is the tool hat helps to speed up your productive and enhace your efficiency.
 
 ## How does Dockgispy Work
+If you have read up till this point, you would have wondered how Dockgispy solves common installtion challenge. So, Dockgispy is a Docker based image with preinstalled GIS python module which runs in a separate environment from your operating system. You next question will be, what is Docker?? 
 
-(https://pypi.org/project/geospatial/) Python module, which simplifies the installation of commonly used GIS Python libraries with a single command, Dockgispy takes ease of use to the next level. 
-Qiusheng Wu [giswqs](https://github.com/giswqs) [geospatial](https://pypi.org/project/geospatial/) Python module, which simplifies the installation of commonly used GIS Python libraries with a single command, Dockgispy takes ease of use to the next level. [geospatial](https://pypi.org/project/geospatial/) Python module, which simplifies the installation of commonly used GIS Python libraries with a single command, Dockgispy takes ease of use to the next level.
+
+
