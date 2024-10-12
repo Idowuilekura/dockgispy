@@ -19,7 +19,8 @@ Beyond carring for the underlying operating system, a common challenge faced by 
 Dockgispy was developed to solve the challenge of installing your commonly used python module, and cut off the time taken to get your environment ready for your GIS workflow. You can think, of a system that removes the hassles of setting up your environment and take you directly to your workflow. Dockgispy is the tool hat helps to speed up your productive and enhace your efficiency.
 
 ## How does Dockgispy Work
-If you have read up till this point, you would have wondered how Dockgispy solves common installtion challenge. So, Dockgispy is a Docker based image with preinstalled GIS python module which runs in a separate environment from your operating system. You next question will be, what is Docker?? 
+If you have read up till this point, you would have wondered how Dockgispy solves common installation challenge. So, Dockgispy is a Docker based image with preinstalled GIS python module which runs in a separate environment from your operating system. Your next question will be, what is Docker?? Docker is a tool that solves a problem of "it works on my computer, but not on another system". Docker runs containers in isolated processes on the host system without affecting any process or files on the host system. Docker was initially built on linux, hence whatever runs on Linux will run on Linux based docker images. 
+### Why was Docker Chosen for Dockgispy
 
 
 
