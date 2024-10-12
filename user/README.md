@@ -13,4 +13,4 @@ The usual steps for starting any GIS workflow with Python are:
 
 However, following this method doesn't always guarantee a successful installation due to several dependencies that might not be compatible with your operating system. To address this issue, Conda (from Anaconda) was developed to handle these dependencies effectively. However, Conda doesn't contain certain modules that are developed by external developers, which makes life easier. In addition, Conda can be too big and bulky to work with. Also, certain Python modules need external modules that aren't developed in Python, which can pose challenges during installation.
 
-Beyond the underlying 
+Beyond carring for the underlying operating system, a common challenge faced by beginners and experienced GIS python users is the difficulty of installing their commonly used modules accross different virtual environments. To solve this challenge, 
