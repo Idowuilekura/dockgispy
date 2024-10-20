@@ -9,7 +9,7 @@ The usual steps for starting any GIS workflow with Python are:
 - Find and download a compatible Python version.
 - Use `pip` to install the required modules.
 - Anticipate a smooth installation of the module.
-- Start your favorite development platform e.g Jupyter Notebook, Jupyter Lab, Vscode or anyone.
+- Start your favorite development platform (e.g Jupyter Notebook, Jupyter Lab, Vscode, etc.).
 - Start your Gis Analysis or Geospatial Workflow. 
 
 However, following this method doesn't always guarantee a successful installation due to several dependencies that might not be compatible with your operating system. To address this issue, Conda (from Anaconda) was developed to handle these dependencies effectively. However, Conda doesn't contain certain modules that are developed by external developers, which makes life easier. In addition, Conda can be too big and bulky to work with. Also, certain Python modules need external modules that aren't developed in Python, which can pose challenges during installation.
