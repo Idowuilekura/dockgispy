@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/2ddc6ffb-3a78-4094-966c-21795ba267f2)
 
-**Dockgispy** is a game-changing Docker image designed specifically for the GIS ecosystem! Inspired by the Qiusheng Wu [giswqs](https://github.com/giswqs) [geospatial](https://pypi.org/project/geospatial/) Python module, which simplifies the installation of commonly used GIS Python libraries with a single command, Dockgispy takes ease of use to the next level.
+**Dockgispy** is a game-changing Docker image designed specifically for the GIS ecosystem! Inspired by the [Qiusheng Wu] (https://github.com/giswqs) [geospatial](https://pypi.org/project/geospatial/) Python module, which simplifies the installation of commonly used GIS Python libraries with a single command, Dockgispy takes ease of use to the next level.
 
 This all-in-one solution comes pre-loaded with essential Python modules, allowing you to dive straight into your projects without the usual setup hassles. Whether you're a newcomer navigating the complexities of GIS or an experienced user frustrated by installation quirks—especially on Windows—Dockgispy is here to save the day.
 
@@ -10,19 +10,19 @@ Dockgispy offers a low-code solution for deploying your Python GIS infrastructur
 
 **Features**
 - 🫙 Low code Python Based Environment for Gis Development and workflow.
-- 🔥 Fast image build with [UV](https://astral.sh/blog/uv), the fastest python package manager and installer in the world.
 - 🥰 Faster and easier way to go from ideation to development without worrying about your underlying operating system.
-- ⚔ Ability to be creative and explore without fear of destroying your local system. The workflow is opened in an isolated environment away from your local filesytem. 
+- ⚔ Ability to be creative and explore without fear of destroying your local system. The workflow is opened in an isolated environment away from your local filesytem.
+- 🔥 Build images at lightning speed with the fastest package manager and installer available, all thanks to [UV](https://astral.sh/blog/uv)! 
 
 **Tags**
-- Smallest contains few GIS python module, intended for beginners, students or those who want to quickly prototype with basic GIS modules in Python. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispysmallest/requirements.txt). 
-- Medium contains python modules from the smallest and more modules. This is intended for those who wish to explore GIS in python at an intermediate level. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispymedium/requirements.txt)
-- Large contains python modules from the Medium image size and the inclusion of GDAL python module. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylarge/requirements.txt)
-- Largest Contains python modules from the Large with the inclusion of Apache Spark, a big data analytics tool for data processing and transformation. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylargest/requirements.txt)
+- Smallest contains few GIS python module, intended for beginners, students or those who want to quickly prototype with basic GIS modules in Python. View the list of installed libraries here[link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispysmallest/requirements.txt). 
+- Medium contains python modules from the smallest and more modules. This is intended for those who wish to explore GIS in python at an intermediate level. View the list of installed libraries here[link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispymedium/requirements.txt)
+- Large contains python modules from the Medium image size and the inclusion of GDAL python module. View the list of installed libraries here[link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylarge/requirements.txt)
+- Largest Contains python modules from the Large with the inclusion of Apache Spark, a big data analytics tool for data processing and transformation. View the list of installed libraries through here[link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylargest/requirements.txt)
 
 **Image Environment Variables**
 To run the docker image, you need to provide two optional environment variables which are
-1. The option to set the development environment to either open a Jupyter Notebook or Jupyterlab. This can be done with the *IDE_SET* environment variable, which expects either "lab" to start a jupyterlab or "notebook" to start a JupyterNotebook. You can choose to omit specifying the variable, however JupyterLab server will be started by default. 
+1. The option to set the development environment to either open a Jupyter Notebook or Jupyterlab. This can be done with the *IDE_SET* environment variable, which expects either "lab" to start a Jupyterlab or "notebook" to start a Jupyter Notebook. You can choose to omit specifying the variable, however JupyterLab server will be started by default. 
 
 **How to Run the Image**
 
