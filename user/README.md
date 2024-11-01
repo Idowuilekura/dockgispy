@@ -1,7 +1,7 @@
 # Introduction
 **Dockgispy** is a fast Python-based Docker Image environment designed for quick GIS development and workflow. In a nutshell, it helps you with your workflow without the hassle of installing Python modules.  It solves a common challenge GIS beginners and professionals face: installing Python modules across different operating systems.
 
-You must account for the underlying system requirements to start GIS development on any operating system. However, installing specific Python modules, particularly on Windows, can be challenging.
+To start GIS development on any operating system, you must account for the underlying system requirements. However, installing specific Python modules, particularly on Windows, can be challenging.
 
 The usual steps for starting any GIS workflow with Python are:
 
@@ -12,11 +12,11 @@ The usual steps for starting any GIS workflow with Python are:
 - Start your favourite development platform (e.g. Jupyter Notebook, Jupyter Lab, Vscode, etc.).
 - Start your GIS analysis or Geospatial Workflow. 
 
-However, following this method doesn't always guarantee a successful installation due to several dependencies that might not be compatible with your operating system. Conda (from Anaconda) was developed to handle these dependencies effectively. However, Conda doesn't contain specific modules developed by external developers, making life easier. In addition, Conda can be too big and bulky to work with. Also, specific Python modules need external modules that aren't developed in Python, which can pose challenges during installation.
+However, following this method doesn't always guarantee a successful installation due to several dependencies that might not be compatible with your operating system. Conda (from Anaconda) was developed to handle these dependencies effectively. However, Conda doesn't contain specific modules developed by external developers, making life easier. In addition, Conda can be too big and bulky to work with. Also, specific Python modules need external modules not developed in Python, which can pose challenges during installation.
 
-Beyond caring for the underlying operating system, a common challenge faced by beginners and experienced GIS Python users is the difficulty of installing commonly used Python modules across different virtual environments. To solve this problem, the development environment(https://github.com/giswqs) developed [geospatial](https://pypi.org/project/geospatial/), a Python module that installs a commonly used Python module for GIS workflow. Although this amazing module removes the hassle of remembering or searching for commonly used Python modules, the common challenge of taking into account the underlying infrastructure is still an issue. 
+Beyond caring for the underlying operating system, a common challenge faced by beginners and experienced GIS Python users is the difficulty of installing commonly used Python modules across different virtual environments. To solve this problem, the development environment(https://github.com/giswqs) developed [geospatial](https://pypi.org/project/geospatial/), a Python module that installs a commonly used Python module for GIS workflow. Although this amazing module removes the hassle of remembering or searching for commonly used Python modules, the common challenge of considering the underlying infrastructure is still an issue. 
 
-Dockgispy was developed to solve the challenge of installing your commonly used Python module and cut the time taken to get your environment ready for your GIS workflow. Think of a system that removes the hassles of setting up your environment and takes you directly to your workflow. Dockgispy is a tool that helps to speed up your productivity and enhance your efficiency.
+Dockgispy was developed to solve the challenge of installing your commonly used Python module and cut the time to prepare your environment for your GIS workflow. Think of a system that removes the hassles of setting up your environment and takes you directly to your workflow. Dockgispy is a tool that helps to speed up your productivity and enhance your efficiency.
 
 ## How does Dockgispy Work
 If you have read up to this point, you would have wondered how Dockgispy solves common installation challenges. So, Dockgispy is a Docker-based image with a preinstalled GIS Python module which runs in a separate environment from your operating system. Your next question will be, what is Docker? Docker is a tool that solves the problem of "it works on my computer, but not on another system". Docker runs containers in isolated processes on the host system without affecting any process or files on the host system. Docker was initially built on Linux, hence whatever runs on a Linux machine will also run on a Linux-based docker image. 
@@ -29,18 +29,18 @@ An important question on your mind is why I should leave my traditional method o
 - 🥰 Faster and easier way to go from ideation to development without worrying about your underlying operating system. With Dockgispy, your speed of going from when an idea comes to your head to start your development environment is faster than the speed of light 😉. 
 - ⚔ Ability to be creative and explore without fear of destroying your local system. Dockgispy is based on docker, which opens the development environment in an isolated environment away from your local filesystem and processes.
 - 💰 Access to different GIS, Python, and big data analytics modules based on your preference. 
-- 🔥 Fast image build with  [UV](https://astral.sh/blog/uv), the fastest Python package manager and installer in the world. Dockgispy installed Python modules were installed with UV, which sped up the image build. Hence, rebuilding the image for your desired use is blazing fast. 
+- 🔥 Fast image build with  [UV](https://astral.sh/blog/uv), the fastest Python package manager and installer worldwide. Dockgispy installed Python modules were installed with UV, which sped up the image build. Hence, rebuilding the image for your desired use is blazing fast. 
 
 ## How to use Dockgispy 
-Before you get started with running the Dockgispy docker image, you need to note certain things. The image has been given different tags to ensure that Dockgispy caters to different users and their use cases. Docker images are given names and tags, which can be for versioning, specific tasks, etc. The information about the different tags are shown below:
+Before you get started with running the Dockgispy docker image, you need to note certain things. The image has been given different tags to ensure that Dockgispy caters to users and their use cases. Docker images are given names and tags, which can be for versioning, specific tasks, etc. The information about the different tags are shown below:
 **Tags**
 - The smallest contains a few GIS Python modules intended for beginners, students, or those who want to prototype quickly with basic GIS modules in Python. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispysmallest/requirements.txt). 
 - Medium contains Python modules from the smallest and additional python modules. This is intended for those who wish to explore GIS in Python at an intermediate level. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispymedium/requirements.txt)
 - Large contains Python modules from the Medium image size and the inclusion of the GDAL Python module. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylarge/requirements.txt)
-- Largest Contains Python modules from the Large with the inclusion of Apache Spark, a big data analytics tool for data processing and transformation. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylargest/requirements.txt)
+- Largest Contains Python modules from the Large, including Apache Spark, a big data analytics tool for data processing and transformation. You can view the list of installed libraries through this [link](https://github.com/Idowuilekura/dock_gis_py/blob/master/dockgispylargest/requirements.txt)
 **Image Environment Variables**
 To run the docker image, you need to provide one optional environment variable, which is:
-1. The option to set the development environment is to open either a Jupyter Notebook or Jupyterlab. This can be done with the `IDE_SET` environment variable, which expects either the word `lab` to start  Jupyterlab or `notebook` to start a JupyterNotebook environment. You can choose to omit specifying the variable. However, the JupyterLab server will be started by default. 
+1. The option to set the development environment is to open a Jupyter Notebook or Jupyterlab. This can be done with the `IDE_SET` environment variable, which expects either the word `lab` to start  Jupyterlab or `notebook` to start a JupyterNotebook environment. You can choose to omit specifying the variable. However, the JupyterLab server will be started by default. 
 
 ### How to Run Dockgispy Image
 With the understanding that you have now, you are well-equipped to run the Dockgispy docker image.  
@@ -50,7 +50,7 @@ Before you proceed, you need to be aware of two methods of running docker images
 Dockgispy can also be run with the above methods, given that it is a docker image. 
 Both methods will be demonstrated below:
     #### 1. Pulling the image before running the image as a container 
-   Pulling the image before running the image as a container. You can either pull the image with a tag which pulls the largest image tag by default, or you can pull with a tag. 
+   Pulling the image before running it as a container. You can either pull the image with a tag, which pulls the largest image tag by default, or you can pull with a tag. 
         - Pulling without a tag: This pulls the largest image tag by default. The command to pull the image without a tag is shown below
 
             ```sh
@@ -63,9 +63,9 @@ Both methods will be demonstrated below:
             ```
 
 ### Running the Pulled Docker Image
-Once you are done pulling the image, you need to run it with this command and specify an optional argument, which is the volume and the port mapping. 
+Once you have pulled the image, you need to run it with this command and specify an optional argument, which is the volume and port mapping. 
   -   The `-v` command is needed to map the directory on the docker container with that on your local system. This ensures you can persist your work or operation (such, files created or notebook created) on the container to your local system. If you do not provide the option, any task will be lost once the container shuts down. The workdir on the container is `app`. Hence, to map a directory with the name `work_dir` on your local system to the `app`, you need to do path_to_work_dir:app e.g `./work_dir:app` for a relative path or pass the absolute path with `/home/pc/app:app`
-    - The `-p` is a docker command to map the port on your system to that of the running container. You need to map any available port to port 8888 on the container. Jupyterlab and JupyterNotebook listen on port 8888 in the container. If you do not map the port on your system to that on the container, you will not be able to access the running instance of JupyterLab or Notebook in the container. 
+    - The `-p` is a docker command that maps the port on your system to that of the running container. You need to map any available port to port 8888 on the container. Jupyterlab and JupyterNotebook listen on port 8888 in the container. If you do not map the port on your system to that on the container, you will not be able to access the running instance of JupyterLab or Notebook in the container. 
         
         To run the image you pulled without a tag, use the command below
 
@@ -82,8 +82,8 @@ Once you are done pulling the image, you need to run it with this command and sp
         
 ### Running the Image with Docker Compose**
 
-A much easier method of running the image is through a docker-compose file, which helps to automate the running of docker images. 
-Below is a sample docker-compose file to run the smallest dockgispy image. If you are not familiar with docker-compose, you can read more about it at this [link](https://www.freecodecamp.org/news/what-is-docker-compose-how-to-use-it/). 
+A much easier method of running the image is through a docker-compose file, which helps automate the docker image running. 
+Below is a sample docker-compose file to run the smallest dockgispy image. If you are unfamiliar with docker-compose, read more about it at this [link](https://www.freecodecamp.org/news/what-is-docker-compose-how-to-use-it/). 
 
 To specify the environment variable, you can uncomment or remove the hash key behind the environment and the `-IDE_SET=lab`. If you wish to set the development environment to a notebook can you use `IDE_SET=notebook` 
 Copy the below, into a file with the name `docker-compose.yaml` and save it.
@@ -114,12 +114,12 @@ https://github.com/user-attachments/assets/9127f8f6-4147-4ea9-8c42-d9cf5ec4e5e2
   https://github.com/user-attachments/assets/878d5ede-e1c9-4580-82ff-9f56a58dfc09
 
 **Build your own Image from Scratch**
-If you wish to build your own image, probably because the images do not have modules you need for your workflow or you wish to strip down the modules that are installed. You can follow the steps below to build your image from scratch. 
+If you wish to build your image, probably because the images do not have modules you need for your workflow or you want to strip down the installed modules. You can follow the steps below to build your image from scratch. 
 - Clone the repository with this command `git clone https://github.com/Idowuilekura/dock_gis_py.git`
 - Change your directory into the cloned folder which is `dock_gis_py` with this command `cd dock_gis_py`
 - You can change the directory to any of the folder tags of your choice such as `dockgispysmallest`.
 - Once you are in the folder of your choice, you will see a file named `requirements.txt`. To learn more about the importance of `requirements.txt` you can check this [link](https://pip.pypa.io/en/stable/reference/requirements-file-format/). You need to open the `requirements.txt` and remove or add the Python Gis module of your choice.
-- Once, you are done with the editing, save the file. Ensure you confirm that your changes are saved.
+- Once you are done editing, save the file. Ensure you confirm that your changes are saved.
 - The next step is to build your docker image. To build your image type this command `docker build -t name_of_your_image` e.g if you wish to use `dockgispy` as the name of your new image then run this command `docker build -t dockgispy`. The image will automatically build with the speed of light, thanks to `UV` 😉 for installing the Python packages.
 - Once you have built the image, you can run this command `docker image ls` and see your newly built image.
 - The last step is to run your image by using `docker run -v path_to_your_local_folder:/app -p your_desired_port:8888 dockgispy`. Assume your newly built image is `dockgispy`. You can also use docker-compose, replace the image with your image name in the content shown below, save the content into a file and run `docker compose up`.
