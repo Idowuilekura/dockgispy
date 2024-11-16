@@ -1,4 +1,3 @@
-
 # Dockgispy - Low Code Docker Based Python-GIS Environment 
 
 Dockgispy is a low-code, all-in-one environment that integrates commonly used Python-GIS modules. It is designed to eliminate the hassle of configuring your GIS environment, allowing you to focus on your projects without the frustrations of setup.
@@ -18,9 +17,9 @@ Dockgispy was developed to solve the challenge of installing your commonly used 
 The documentation and how to use Dockgipy can be accessed here: [https://dockgispy.gitbook.io/dockgispy](https://dockgispy.gitbook.io/dockgispy)
 
 ## Have you Encountered a problem or faced an issue?
-Use the Github Issue to report any problems you face. You can also use the issue page to suggest improvements for newer versions of Dockgispy. The issue page can be accessed [here](https://github.com/Idowuilekura/dockgispy/issues)
+You can report any problems you encounter on the GitHub Issue page. This page also allows you to suggest improvements for future versions of Dockgispy. Access the issue page [here](https://github.com/Idowuilekura/dockgispy/issues).
 
 ## Support Dockgisy
-You can support Dockgispy by contributing financially by buying Dockgispy a coffee with this [link](https://buymeacoffee.com/idowuilekura) or by submitting a pull request. 
+Support Dockgispy by contributing financially or submitting a pull request. You can buy Dockgispy a coffee using this [link](https://buymeacoffee.com/idowuilekura).
 
 
