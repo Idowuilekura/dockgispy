@@ -18,7 +18,7 @@ Dockgispy was developed to solve the challenge of installing your commonly used 
 The documentation and how to use Dockgipy can be accessed here: [https://dockgispy.gitbook.io/dockgispy](https://dockgispy.gitbook.io/dockgispy)
 
 ## Have you Encountered a problem or faced an issue?
-Use the Github Issue to report any problems you face. You can also use the issue page to suggest improvements for newer versions of Dockgispy. 
+Use the Github Issue to report any problems you face. You can also use the issue page to suggest improvements for newer versions of Dockgispy. The issue page can be accessed [here](https://github.com/Idowuilekura/dockgispy/issues)
 
 ## Support Dockgisy
 You can support Dockgispy by contributing financially or by submitting a pull request. 
