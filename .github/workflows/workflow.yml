@@ -28,27 +28,29 @@ jobs:
 
     - name: check for changes in the python file
       run: | 
-          diff_docker_file=$(git diff --name-only origin/master...HEAD | grep -E '^.*py$' || echo "")
-          diff_requirements_txt=$(git diff --name-only origin/master...HEAD | grep -E '^.*Dockerfile$' || echo "")
+          diff_docker_file=$(git diff --name-only origin/master...HEAD | grep -E '^.*Dockerfile$' || echo "")
+          diff_requirements_txt=$(git diff --name-only origin/master...HEAD | grep -E '^.*requirements.txt$' || echo "")
           echo $(pwd)
-          if [ -z "$diff_docker_file" ] && [ -z "diff_requirements_txt" ]; then
+          if [ -z "$diff_docker_file" ] && [ -z "$diff_requirements_txt" ]; then
             echo "No change made to the Dockerfile and the requirements.txt file."
           
-          elif [ -z "$diff_docker_file" ] && [ -n "diff_requirements_txt" ]; then
+          elif [ -z "$diff_docker_file" ] && [ -n "$diff_requirements_txt" ]; then
             echo "Changes made to the requirements.txt file:"
             for file in $diff_requirements_txt; do 
               echo "inside the file loop"
               echo $file
               IFS='/ ' read -r -a array <<< $file
               echo "${array[0]}"
+              done 
 
-          elif [ -n "$diff_docker_file" ] && [ -z "diff_requirements_txt" ]; then
+          elif [ -n "$diff_docker_file" ] && [ -z "$diff_requirements_txt" ]; then
             echo "Changes made to the dockerfile:"
             for file in $diff_docker_file; do 
               echo "inside the file loop"
               echo $file
               IFS='/ ' read -r -a array <<< $file
               echo "${array[0]}"
+            done
 
           else
             
