@@ -16,7 +16,7 @@ ADD https://astral.sh/uv/install.sh /uv-installer.sh
 
 RUN sh /uv-installer.sh && rm /uv-installer.sh
 
-ENV PATH="/root/.cargo/bin/:$PATH"
+ENV PATH="/root/.local/bin/:$PATH"
 
 RUN uv venv /opt/venv
 
@@ -44,9 +44,9 @@ FROM python:3.12-slim-bookworm AS final
 
 COPY --from=builder /opt/venv /opt/venv
 
-COPY --from=builder /root/.cargo/bin/ /root/.cargo/bin/
+COPY --from=builder /root/.local/bin/ /root/.cargo/bin/
 
-ENV PATH="/root/.cargo/bin/:$PATH"
+ENV PATH="/root/.local/bin/:$PATH"
 
 
 WORKDIR /app
