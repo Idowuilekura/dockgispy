@@ -90,3 +90,4 @@ xmovie
 xyzservices
 polars
 numpy
+satpy
