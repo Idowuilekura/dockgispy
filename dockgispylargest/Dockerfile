@@ -43,7 +43,7 @@ FROM python:3.9-slim-bookworm AS final
 
 RUN apt update && apt install -y python3-launchpadlib wget 
 COPY --from=builder /opt/venv /opt/venv
-COPY --from=builder /root/.cargo/bin /root/.cargo/bin
+COPY --from=builder /root/.local/bin /root/.cargo/bin
 # COPY --from=builder /opt/venv/bin /opt/venv/bin
 # COPY --from=builder /opt/venv/lib /opt/venv/lib
 # COPY --from=builder /opt/venv/pyvenv.cfg /opt/venv/pyvenv.cfg
