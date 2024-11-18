@@ -17,7 +17,7 @@ ADD https://astral.sh/uv/install.sh /uv-installer.sh
 
 RUN sh /uv-installer.sh && rm /uv-installer.sh
 
-ENV PATH="/root/.cargo/bin/:$PATH"
+ENV PATH="/root/.local/bin/:$PATH"
 
 RUN uv venv /opt/venv
 
@@ -43,7 +43,7 @@ FROM python:3.9-slim-bookworm AS final
 
 RUN apt update && apt install -y python3-launchpadlib
 COPY --from=builder /opt/venv /opt/venv
-COPY --from=builder /root/.cargo/bin /root/.cargo/bin
+COPY --from=builder /root/.local/bin /root/.cargo/bin
 # COPY --from=builder /opt/venv/bin /opt/venv/bin
 # COPY --from=builder /opt/venv/lib /opt/venv/lib
 # COPY --from=builder /opt/venv/pyvenv.cfg /opt/venv/pyvenv.cfg
@@ -59,7 +59,7 @@ RUN apt-get update --fix-missing \
     ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
     ENV C_INCLUDE_PATH=/usr/include/gdal
 
-ENV PATH="/root/.cargo/bin/:$PATH"
+ENV PATH="/root/.local/bin/:$PATH"
 ENV VIRTUAL_ENV="/opt/venv"
 
 ENV PATH="/opt/venv/bin:$PATH"
