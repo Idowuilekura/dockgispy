@@ -28,7 +28,7 @@ jobs:
 
     - name: check for changes in the python file
       run: | 
-          diff_docker_file=$(git diff --name-only origin/master...HEAD | grep -E '^.*Dockerfilet$' || echo "")
+          diff_docker_file=$(git diff --name-only origin/master...HEAD | grep -E '^.*Dockerfile$' || echo "")
           diff_requirements_txt=$(git diff --name-only origin/master...HEAD | grep -E '^.*requirements.txt$' || echo "")
           echo $(pwd)
           if [ -z "$diff_docker_file" ] && [ -z "$diff_requirements_txt" ]; then
