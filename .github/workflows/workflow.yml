@@ -53,7 +53,8 @@ jobs:
               full_path=$(echo "$folder_name""/Dockerfile")
               echo "about to build the docker image"
               cd $folder_name
-              docker build -t $folder_name -f $full_path . 
+              echo "changed directory into the folder"
+              docker build -t $folder_name . 
               echo "done building the docker image"
               cd ..
               done
