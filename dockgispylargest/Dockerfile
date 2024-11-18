@@ -17,7 +17,7 @@ ADD https://astral.sh/uv/install.sh /uv-installer.sh
 
 RUN sh /uv-installer.sh && rm /uv-installer.sh
 
-ENV PATH="/root/.cargo/bin/:$PATH"
+ENV PATH="/root/.local/bin/:$PATH"
 
 RUN uv venv /opt/venv
 
@@ -61,7 +61,7 @@ RUN apt-get update --fix-missing \
     ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
     ENV C_INCLUDE_PATH=/usr/include/gdal
 
-ENV PATH="/root/.cargo/bin/:$PATH"
+ENV PATH="/root/.local/bin/:$PATH"
 ENV VIRTUAL_ENV="/opt/venv"
 
 ENV PATH="/opt/venv/bin:$PATH"
