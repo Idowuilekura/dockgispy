@@ -51,7 +51,9 @@ jobs:
               echo "${array[0]}"
               folder_name=$(echo "${array[0]}")
               full_path=$(echo "$folder_name""/Dockerfile")
-              echo $full_path
+              echo "about to build the docker image"
+              docker build -t $folder_name -f $full_path . 
+              echo "done building the docker image"
               done
 
           elif [ -n "$diff_docker_file" ] && [ -z "$diff_requirements_txt" ]; then
