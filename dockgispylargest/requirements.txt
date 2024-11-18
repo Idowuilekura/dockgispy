@@ -92,3 +92,4 @@ polars
 numpy
 polars
 pandas
+xarray
