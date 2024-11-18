@@ -44,7 +44,7 @@ jobs:
               IFS='/ ' read -r -a array <<< $file
               echo "${array[0]}"
               folder_name=$(echo "${array[0]}")
-              full_path=$(echo "$folder_name" "/Dockerfile")
+              full_path=$(echo "$folder_name""/Dockerfile")
               echo $full_path
               done
 
