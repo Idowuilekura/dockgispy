@@ -88,4 +88,5 @@ xee
 xcube
 xmovie
 xyzservices
+polars
 
