@@ -89,4 +89,3 @@ xcube
 xmovie
 xyzservices
 polars
-numpy
