@@ -15,7 +15,7 @@ RUN apt update > /dev/null && apt install --no-install-recommends -y curl ca-cer
 
 ADD https://astral.sh/uv/install.sh /uv-installer.sh
 
-RUN sh /uv-installer.sh && rm /uv-installer.sh
+RUN sh /uv-installer.sh > /dev/null && rm /uv-installer.sh
 
 ENV PATH="/root/.local/bin/:$PATH"
 
@@ -30,10 +30,10 @@ COPY requirements.txt /opt/necessary/requirements.txt
 
 # COPY requirements.txt .
 # RUN uv pip install Cython 
-RUN uv pip install richdem
+RUN uv pip install richdem > /dev/null
 # RUN git clone --recursive https://github.com/r-barnes/richdem.git ghrichdem
 # RUN cd ghrichdem/wrappers/pyrichdem && uv pip install .
-RUN uv pip install --strict --no-cache -r /opt/necessary/requirements.txt 
+RUN uv pip install --strict --no-cache -r /opt/necessary/requirements.txt > /dev/null
 RUN uv cache clean 
 
 
@@ -43,7 +43,7 @@ FROM python:3.9-slim-bookworm AS final
 
 RUN apt update > /dev/null && apt install -y python3-launchpadlib > /dev/null
 COPY --from=builder /opt/venv /opt/venv
-COPY --from=builder /root/.local/bin /root/.cargo/bin
+COPY --from=builder /root/.local/bin /root/.local/bin
 # COPY --from=builder /opt/venv/bin /opt/venv/bin
 # COPY --from=builder /opt/venv/lib /opt/venv/lib
 # COPY --from=builder /opt/venv/pyvenv.cfg /opt/venv/pyvenv.cfg
