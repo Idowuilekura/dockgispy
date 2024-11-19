@@ -66,6 +66,14 @@ jobs:
               echo $file
               IFS='/ ' read -r -a array <<< $file
               echo "${array[0]}"
+              folder_name=$(echo "${array[0]}")
+              full_path=$(echo "$folder_name""/Dockerfile")
+              echo "about to build the docker image"
+              cd $folder_name
+              echo "done changing the directory"
+              docker build -t $folder_name . 
+              echo "done building the docker image"
+              cd ..
               done 
 
 
