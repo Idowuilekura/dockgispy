@@ -41,7 +41,7 @@ RUN uv cache clean
 # final stage
 FROM python:3.9-slim-bookworm AS final
 
-RUN apt update && apt install -y python3-launchpadlib wget 
+RUN apt update -q && apt install -qy python3-launchpadlib wget 
 COPY --from=builder /opt/venv /opt/venv
 COPY --from=builder /root/.local/bin /root/.local/bin
 # COPY --from=builder /opt/venv/bin /opt/venv/bin
@@ -58,8 +58,8 @@ RUN apt-get update --fix-missing > /dev/null \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /root/.cache && rm -rf /var/cache/apt/* > /dev/null
     
-    ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
-    ENV C_INCLUDE_PATH=/usr/include/gdal
+ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
+ENV C_INCLUDE_PATH=/usr/include/gdal
 
 ENV PATH="/root/.local/bin/:$PATH"
 ENV VIRTUAL_ENV="/opt/venv"
@@ -88,7 +88,7 @@ ENV PATH="${SPARK_HOME}/bin:${PATH}"
 ENV PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"
 ENV PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH"
 
-RUN uv pip install -q pyspark 
+RUN uv pip install pyspark > /dev/null
 
 
 WORKDIR /app
