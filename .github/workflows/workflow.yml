@@ -54,7 +54,7 @@ jobs:
               echo "about to build the docker image"
               cd $folder_name
               echo "done changing the directory"
-              image_tag=$(echo "idowuilekura/dockgispy:"$folder_name")
+              image_tag=$(echo "idowuilekura/dockgispy:""$folder_name")
               docker build -t $image_tag . 
               echo "done building the docker image $image_tag"
               cd ..
@@ -73,7 +73,7 @@ jobs:
               echo "about to build the docker image"
               cd $folder_name
               echo "done changing the directory"
-              image_tag=$(echo "idowuilekura/dockgispy:"$folder_name")
+              image_tag=$(echo "idowuilekura/dockgispy:""$folder_name")
               docker build -t $image_tag . 
               echo "done building the docker image $image_tag"
               cd ..
