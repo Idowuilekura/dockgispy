@@ -68,6 +68,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 RUN uv pip install -q GDAL==`gdal-config --version`
 
+RUN echo "me" > /dev/null
 # COPY ./install_spark.sh /opt/necessary/install_spark.sh
 
 # RUN chmod +x /opt/necessary/install_spark.sh
