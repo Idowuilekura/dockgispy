@@ -7,14 +7,14 @@ WORKDIR /app
 # ENV PYTHONUNBUFFERED=1
 # --no-install-recommends
 
-RUN apt update && apt install --no-install-recommends -y curl ca-certificates 
+RUN apt update > /dev/null && apt install --no-install-recommends -y curl ca-certificates > /dev/null
 # g++ python3-dev gcc
 
 # ENV PROJ_DIR=/usr/local/bin/proj
 
 ADD https://astral.sh/uv/install.sh /uv-installer.sh
 
-RUN sh /uv-installer.sh && rm /uv-installer.sh
+RUN sh /uv-installer.sh > /dev/null && rm /uv-installer.sh
 
 ENV PATH="/root/.local/bin/:$PATH"
 
@@ -29,7 +29,7 @@ COPY requirements.txt /opt/necessary/requirements.txt
 
 # COPY requirements.txt .
 # RUN uv pip install Cython 
-RUN uv pip install --strict --no-cache -r /opt/necessary/requirements.txt 
+RUN uv pip install -q --strict --no-cache -r /opt/necessary/requirements.txt 
 RUN uv cache clean 
 
 
