@@ -52,7 +52,9 @@ jobs:
               folder_name=$(echo "${array[0]}")
               full_path=$(echo "$folder_name""/Dockerfile")
               docker_repository_name="idowuilekura/dockgispy"
-              image_repository_path=$(echo "$docker_repository_name"":""$folder_name")
+              tag_name=${folder_name#dockgispy}
+              image_repository_path=$(echo "$docker_repository_name"":""$tag_name")
+              # image_repository_path=$(echo "$docker_repository_name"":""$folder_name")
               echo "about to build the docker image"
               cd $folder_name
               echo "done changing the directory"
