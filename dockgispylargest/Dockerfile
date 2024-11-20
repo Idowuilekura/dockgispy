@@ -7,7 +7,7 @@ WORKDIR /app
 # ENV PYTHONUNBUFFERED=1
 # --no-install-recommends
 
-RUN apt update > /dev/null && apt install --no-install-recommends -y curl ca-certificates g++ gcc openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev python3-dev git > /dev/null
+RUN apt update -q && apt install --no-install-recommends -y curl ca-certificates g++ gcc openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev python3-dev git > /dev/null
 # sudo apt install openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev
 # g++ python3-dev gcc
 
@@ -41,7 +41,7 @@ RUN uv cache clean
 # final stage
 FROM python:3.9-slim-bookworm AS final
 
-RUN apt update && apt install -y python3-launchpadlib wget 
+RUN apt update -q && apt install -qy python3-launchpadlib wget 
 COPY --from=builder /opt/venv /opt/venv
 COPY --from=builder /root/.local/bin /root/.local/bin
 # COPY --from=builder /opt/venv/bin /opt/venv/bin
