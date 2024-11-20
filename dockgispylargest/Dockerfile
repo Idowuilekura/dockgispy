@@ -49,14 +49,14 @@ COPY --from=builder /root/.local/bin /root/.local/bin
 # COPY --from=builder /opt/venv/pyvenv.cfg /opt/venv/pyvenv.cfg
 # COPY --from=builder /bin/sh /bin/sh
 RUN apt-get update --fix-missing > /dev/null \
-    && apt-get install -y software-properties-common > /dev/null \
-    && add-apt-repository ppa:ubuntugis/ubuntugis-unstable > /dev/null \
-    && apt-get update > /dev/null && \
-    apt-get clean > /dev/null && \
-    apt update && apt install  -y --no-install-recommends > /dev/null \ 
-    gdal-bin libgdal-dev gcc build-essential libtiff5-dev > /dev/null && \
+    && apt-get install -y software-properties-common \
+    && add-apt-repository ppa:ubuntugis/ubuntugis-unstable \
+    && apt-get update && \
+    apt-get clean && \
+    apt update && apt install  -y --no-install-recommends \ 
+    gdal-bin libgdal-dev gcc build-essential libtiff5-dev && \
     rm -rf /var/lib/apt/lists/* && \
-    rm -rf /root/.cache && rm -rf /var/cache/apt/* > /dev/null
+    rm -rf /root/.cache && rm -rf /var/cache/apt/*
     
     ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
     ENV C_INCLUDE_PATH=/usr/include/gdal
