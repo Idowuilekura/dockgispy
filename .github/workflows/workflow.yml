@@ -59,7 +59,7 @@ jobs:
               docker build -t $image_repository_path . 
               echo "done building the docker image with name $image_repository_path"
               cd ..
-              docker rmi -f $(docker image ls -aq)
+              docker rmi -qf $(docker image ls -aq)
               echo "done removing all docker images on the repo"
               done
 
@@ -73,14 +73,15 @@ jobs:
               folder_name=$(echo "${array[0]}")
               full_path=$(echo "$folder_name""/Dockerfile")
               docker_repository_name="idowuilekura/dockgispy"
-              image_repository_path=$(echo "$docker_repository_name"":""$folder_name")
+              tag_name=${folder_name#dockgispy}
+              image_repository_path=$(echo "$docker_repository_name"":""$tag_name")
               echo "about to build the docker image"
               cd $folder_name
               echo "done changing the directory"
               docker build -t $image_repository_path . 
               echo "done building the docker image with name $image_repository_path"
               cd ..
-              docker rmi -f $(docker image ls -aq)
+              docker rmi -qf $(docker image ls -aq)
               echo "done removing all docker images on the repo"
               done 
 
