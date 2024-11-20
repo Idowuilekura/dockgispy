@@ -36,7 +36,7 @@ localtileserver
 lonboard
 mapboxgl
 mapclassify
-maplibre; python_version >= '3.9'
+#maplibre; python_version >= '3.9'
 mapwidget
 movingpandas
 mss
@@ -93,3 +93,4 @@ numpy
 polars
 pandas
 numpy
+pandas
