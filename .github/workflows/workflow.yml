@@ -61,7 +61,7 @@ jobs:
               docker build -t $image_repository_path . 
               echo "done building the docker image with name $image_repository_path"
               cd ..
-              docker rmi -qf $(docker image ls -aq)
+              docker rmi -f $(docker image ls -aq) > /dev/null
               echo "done removing all docker images on the repo"
               done
 
@@ -83,7 +83,7 @@ jobs:
               docker build -t $image_repository_path . 
               echo "done building the docker image with name $image_repository_path"
               cd ..
-              docker rmi -qf $(docker image ls -aq)
+              docker rmi -f $(docker image ls -aq) > /dev/null
               echo "done removing all docker images on the repo"
               done 
 
