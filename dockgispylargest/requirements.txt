@@ -93,3 +93,4 @@ numpy
 polars
 pandas
 numpy
+pandas
