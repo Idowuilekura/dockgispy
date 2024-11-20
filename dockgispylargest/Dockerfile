@@ -89,6 +89,7 @@ ENV PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"
 ENV PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH"
 
 RUN uv pip install -q pyspark 
+RUN uv pip install pyspark==3.5.2
 
 
 WORKDIR /app
