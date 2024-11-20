@@ -66,7 +66,7 @@ ENV VIRTUAL_ENV="/opt/venv"
 
 ENV PATH="/opt/venv/bin:$PATH"
 
-RUN uv pip install GDAL==`gdal-config --version` > /dev/null
+RUN uv pip install -q GDAL==`gdal-config --version`
 
 # COPY ./install_spark.sh /opt/necessary/install_spark.sh
 
@@ -88,7 +88,7 @@ ENV PATH="${SPARK_HOME}/bin:${PATH}"
 ENV PYTHONPATH="${SPARK_HOME}/python/:$PYTHONPATH"
 ENV PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH"
 
-RUN uv pip install pyspark > /dev/null
+RUN uv pip install -q pyspark 
 
 
 WORKDIR /app
