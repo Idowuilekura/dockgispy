@@ -7,7 +7,7 @@ WORKDIR /app
 # ENV PYTHONUNBUFFERED=1
 # --no-install-recommends
 
-RUN apt update -qq && apt install --no-install-recommends --qq -y curl ca-certificates g++ gcc openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev python3-dev git 
+RUN apt update -qq && apt install --no-install-recommends -qq -y curl ca-certificates g++ gcc openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev python3-dev git 
 # sudo apt install openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev
 # g++ python3-dev gcc
 
