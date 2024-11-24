@@ -10,6 +10,7 @@ WORKDIR /app
 RUN apt update -qq && apt install --no-install-recommends -qq -y curl ca-certificates g++ gcc openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev python3-dev git 
 # sudo apt install openmpi-bin libgdal-dev libopenmpi-dev libboost-iostreams-dev
 # g++ python3-dev gcc
+RUN apt-get autoremove && apt-get clean
 
 # ENV PROJ_DIR=/usr/local/bin/proj
 
@@ -34,7 +35,7 @@ RUN uv pip install richdem
 # RUN git clone --recursive https://github.com/r-barnes/richdem.git ghrichdem
 # RUN cd ghrichdem/wrappers/pyrichdem && uv pip install .
 RUN uv pip install --strict --quiet --no-cache -r /opt/necessary/requirements.txt 
-RUN uv cache clean 
+RUN uv cache clean && uv cache prune
 
 
 
@@ -48,15 +49,17 @@ COPY --from=builder /root/.local/bin /root/.local/bin
 # COPY --from=builder /opt/venv/lib /opt/venv/lib
 # COPY --from=builder /opt/venv/pyvenv.cfg /opt/venv/pyvenv.cfg
 # COPY --from=builder /bin/sh /bin/sh
-RUN apt-get update --fix-missing -qq \
-    && apt-get install -y -qq software-properties-common \
+RUN apt-get update --fix-missing \
+    && apt-get install -y software-properties-common \
     && add-apt-repository ppa:ubuntugis/ubuntugis-unstable \
-    && apt-get update -qq && \
-    apt-get clean -qq && \
-    apt update -qq && apt install -qq -y --no-install-recommends \ 
+    && apt-get update && \
+    apt-get clean && \
+    apt update && apt install -y --no-install-recommends \ 
     gdal-bin libgdal-dev gcc build-essential libtiff5-dev && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /root/.cache && rm -rf /var/cache/apt/* > /dev/null
+
+RUN apt-get autoremove && apt-get clean
     
 ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
 ENV C_INCLUDE_PATH=/usr/include/gdal
@@ -106,4 +109,6 @@ EXPOSE 8888
 
 
 CMD ["/opt/necessary/entrypoint.sh"]
+
+
 
