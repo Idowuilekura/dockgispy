@@ -1,4 +1,7 @@
+
+  ![GitHub Repo stars](https://img.shields.io/github/stars/idowuilekura/dockgispy?style=social)   ![Docker Pulls](https://img.shields.io/docker/pulls/idowuilekura/dockgispy)
 # Dockgispy - Low Code Docker Based Python-GIS Environment 
+
 
 Dockgispy is a low-code, all-in-one environment that integrates commonly used Python-GIS modules. It is designed to eliminate the hassle of configuring your GIS environment, allowing you to focus on your projects without the frustrations of setup.
 
