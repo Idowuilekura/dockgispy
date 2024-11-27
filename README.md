@@ -1,6 +1,29 @@
+<p align="center">
+  <a href="https://madhuakula.com/kubernetes-goat">
+    <img alt="Dockgispy" src="kubernetes-goat-logo.png" width="150" />
+  </a>
+</p>
+<h1 align="center">
+  Dockgispy
+</h1>
+<p align="center">
+    ✨ Low Code Docker Based Python-GIS Environment  🚀
+</p>
 
-  ![GitHub Repo stars](https://img.shields.io/github/stars/idowuilekura/dockgispy?style=social)   ![Docker Pulls](https://img.shields.io/docker/pulls/idowuilekura/dockgispy)
-# Dockgispy - Low Code Docker Based Python-GIS Environment 
+<p align="center">   
+    <a href="https://github.com/idowuilekura/dockgispy/blob/master/LICENSE">
+        <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" />
+    </a>       
+    <a href="https://github.com/madhuakula/kubernetes-goat/stargazers">
+        <img alt="Github Stars" src="https://img.shields.io/github/stars/idowuilekura/dockgispy" />
+    </a>    
+    <a href="https://github.com/madhuakula/kubernetes-goat/pulls">
+        <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
+    </a>    
+    <a href="https://hub.docker.com/r/idowuilekura/dockgispy">
+        <img alt="Docker Pulls Kubernetes Goat" src="https://img.shields.io/docker/pulls/idowuilekura/dockgispy" />
+    </a>    
+</p>
 
 
 Dockgispy is a low-code, all-in-one environment that integrates commonly used Python-GIS modules. It is designed to eliminate the hassle of configuring your GIS environment, allowing you to focus on your projects without the frustrations of setup.
