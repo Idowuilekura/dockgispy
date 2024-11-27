@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://madhuakula.com/kubernetes-goat">
+  <a href="https://github.com/Idowuilekura/dockgispy">
     <img alt="Dockgispy" src="./img/dockgispy lo_go.png" width="150" />
   </a>
 </p>
