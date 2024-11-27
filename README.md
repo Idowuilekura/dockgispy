@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://madhuakula.com/kubernetes-goat">
-    <img alt="Dockgispy" src="kubernetes-goat-logo.png" width="150" />
+    <img alt="Dockgispy" src="./img/dockgispy lo_go.png" width="150" />
   </a>
 </p>
 <h1 align="center">
