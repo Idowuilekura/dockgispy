@@ -66,6 +66,8 @@ jobs:
               if [ "$diff_docker_file" == "largest" ]; then
                 docker push $image_repository_path 
                 echo "done pushing the largest, now for the latest"
+                docker tag $image_repository_path $image_repository_path_latest
+                echo "done retagging the largest to latest, about to push the image now"
                 docker push $image_repository_path_latest
                 echo "done pushing the latest tag image"
               else 
@@ -93,6 +95,17 @@ jobs:
               echo "done changing the directory"
               docker build -t $image_repository_path . 
               echo "done building the docker image with name $image_repository_path"
+              echo "about to push the image to docker hub repository"
+              if [ "$diff_docker_file" == "largest" ]; then
+                docker push $image_repository_path 
+                echo "done pushing the largest, now for the latest"
+                docker tag $image_repository_path $image_repository_path_latest
+                echo "done retagging the largest to latest, about to push the image now"
+                docker push $image_repository_path_latest
+                echo "done pushing the latest tag image"
+              else 
+                docker push $image_repository_path 
+              fi 
               cd ..
               docker rmi -f $(docker image ls -aq)
               echo "done removing all docker images on the repo"
