@@ -34,7 +34,7 @@ Dockgispy was developed to solve the challenge of installing your commonly used 
 
 ## Why Use Dockgispy?
 -    🫙 Low code Python Based Environment for GIS Development and workflow. Dockgispy provides zero code-based environmental setups for your GIS workflow. You do not need to battle the manual code creation of a virtual environment or the issues of installing packages with `pip` or `conda` in a virtual environment.  
-- 🥰 Faster and easier way to go from ideation to development without worrying about your underlying operating system. With Dockgispy, your speed of going from when an idea comes to your head to starting your development environment is faster than the speed of light 😉. 
+- 🥰 Faster and easier way to go from ideation to development without worrying about the underlying operating system. With Dockgispy, the speed of going from when an idea comes to mind to starting your development environment is faster than the speed of light 😉. 
 - ⚔ Ability to be creative and explore without fear of destroying your local system. Dockgispy is based on docker, which opens the development environment in an isolated environment away from your local filesystem and processes.
 - 💰 Access to different GIS, Python, and big data analytics modules based on your preference. 
 - 🔥 Fast image build with  [UV](https://astral.sh/blog/uv), the fastest Python package manager and installer worldwide. Dockgispy installed Python modules were installed with UV, which sped up the image build. Hence, rebuilding the image for your desired use is blazing fast. 
