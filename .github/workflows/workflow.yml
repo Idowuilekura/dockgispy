@@ -55,12 +55,22 @@ jobs:
               docker_repository_name="idowuilekura/dockgispy"
               tag_name=${folder_name#dockgispy}
               image_repository_path=$(echo "$docker_repository_name"":""$tag_name")
+              image_repository_path_latest=$(echo "$docker_repository_name"":""latest")
               # image_repository_path=$(echo "$docker_repository_name"":""$folder_name")
               echo "about to build the docker image"
               cd $folder_name
               echo "done changing the directory"
               docker build -t $image_repository_path . 
               echo "done building the docker image with name $image_repository_path"
+              echo "about to push the image to docker hub repository"
+              if [ "$diff_docker_file" == "largest" ]; then
+                docker push $image_repository_path 
+                echo "done pushing the largest, now for the latest"
+                docker push $image_repository_path_latest
+                echo "done pushing the latest tag image"
+              else 
+                docker push $image_repository_path 
+              fi 
               cd ..
               docker rmi -f $(docker image ls -aq)
               echo "done removing all docker images on the repo"
