@@ -46,4 +46,5 @@ The documentation and how to use Dockgipy can be accessed here: [https://dockgis
 Please report any problems you encounter on the GitHub Issue page. This page also allows you to suggest improvements for future versions of Dockgispy. Access the issue page [here](https://github.com/Idowuilekura/dockgispy/issues). Use the discussion page to discuss with your fellow `Dockgispy` users, access the discussion page [here](https://github.com/Idowuilekura/dockgispy/discussions)
 
 ## Support Dockgisy
-You can support Dockgispy by submitting a pull request to fix an issue or propose an improvement. An alternative approach is contributing financially by buying Dockgispy a coffee 😉 which can be done with this [link](https://buymeacoffee.com/idowuilekura).
+You can support Dockgispy by submitting a pull request to fix an issue or propose an improvement. However, ensure you have read the pull request guide before making a pull request. The guide can be accessed [here[]()](https://github.com/Idowuilekura/dockgispy/blob/master/Pull%20Request%20Guidelines.md)
+An alternative approach is contributing financially by buying Dockgispy a coffee 😉 which can be done with this [link](https://buymeacoffee.com/idowuilekura).
