@@ -12,12 +12,12 @@
 
 <p align="center">   
     <a href="https://github.com/idowuilekura/dockgispy/blob/master/LICENSE">
-        <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" />
+        <img alt="License: MIT" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" />
     </a>       
-    <a href="https://github.com/madhuakula/kubernetes-goat/stargazers">
+    <a href="https://github.com/idowuilekura/dockgispy/stargazers">
         <img alt="Github Stars" src="https://img.shields.io/github/stars/idowuilekura/dockgispy" />
     </a>    
-    <a href="https://github.com/madhuakula/kubernetes-goat/pulls">
+    <a href="https://github.com/idowuilekura/dockgispy/pulls">
         <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
     </a>    
     <a href="https://hub.docker.com/r/idowuilekura/dockgispy">
