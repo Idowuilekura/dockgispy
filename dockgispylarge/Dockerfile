@@ -64,6 +64,7 @@ ENV VIRTUAL_ENV="/opt/venv"
 
 ENV PATH="/opt/venv/bin:$PATH"
 
+RUN uv pip install numpy 
 RUN uv pip install GDAL==`gdal-config --version` > /dev/null
 
 
