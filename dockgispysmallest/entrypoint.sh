@@ -26,7 +26,7 @@ fi
 
 if [ -z $IDE_SET ]; then
     warning_code_fun "No IDE set defaulting to jupyter lab"
-    jupyter lab --ip 0.0.0.0 --port 8888 --allow-root
+    jupyter lab --ip 0.0.0.0 --port 8888 --allow-root --IdentityProvider.token="" --ServerApp.password=""
 else
     # IDE_SET=$(echo ${IDE_SET,,})
     # convert upper case to lowercase
@@ -36,17 +36,17 @@ else
      then
         echo "IDE set to $IDE_SET" 
         echo "About to start Jupyter notebook....."
-        jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root
+        jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root --IdentityProvider.token="" --ServerApp.password=""
     elif [ $IDE_SET = "lab" ]
         then
         echo "IDE set to $IDE_SET"
         echo "About to start Jupyter Lab....."
-        jupyter lab --ip 0.0.0.0 --port 8888 --allow-root
+        jupyter lab --ip 0.0.0.0 --port 8888 --allow-root --IdentityProvider.token="" --ServerApp.password=""
     else 
         error_code_fun "You specified an invalid IDE, use notebook or lab to set the IDE" 
         warning_code_fun "Defaulting to jupyter lab"
          echo "About to start Jupyter Lab....."
-        jupyter lab --ip 0.0.0.0 --port 8888 --allow-root
+        jupyter lab --ip 0.0.0.0 --port 8888 --allow-root --IdentityProvider.token="" --ServerApp.password=""
     fi
 fi
 
