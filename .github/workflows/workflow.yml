@@ -39,11 +39,12 @@ jobs:
           # diff_requirements_txt=$(git diff --name-only origin/master...HEAD | grep -E '^.*Dockerfile$' || echo "")
           diff_docker_file=$(git diff --name-only origin/master...HEAD | grep -E '^.*Dockerfile$' || echo "")
           diff_requirements_txt=$(git diff --name-only origin/master...HEAD | grep -E '^.*requirements.txt$' || echo "")
+          diff_entrypoint_file=$(git diff --name-only origin/master...HEAD | grep -E '^.*entrypoint.sh$' || echo "")
           echo $(pwd)
-          if [ -z "$diff_docker_file" ] && [ -z "$diff_requirements_txt" ]; then
+          if [ -z "$diff_docker_file" ] && [ -z "$diff_requirements_txt" ] && [ -z "$diff_entrypoint_file" ]; then
             echo "No change made to the Dockerfile and the requirements.txt file."
           
-          elif [ -z "$diff_docker_file" ] && [ -n "$diff_requirements_txt" ]; then
+          elif [ -z "$diff_docker_file" ] && [ -n "$diff_requirements_txt" ] && && [ -n "$diff_entrypoint_file" ]; then
             echo "Changes made to the requirements.txt file:"
             for file in $diff_requirements_txt; do 
               echo "inside the file loop"
